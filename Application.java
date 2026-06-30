@@ -9,14 +9,14 @@ public class Application {
 
     public static void main(String[] args) throws Exception {
 
-        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
+        HttpServer server = HttpServer.create(new InetSocketAddress(5000), 0);
 
         server.createContext("/", new MyHandler());
 
         server.setExecutor(null);
         server.start();
 
-        System.out.println("Server started at http://localhost:8080");
+        System.out.println("Server started at http://localhost:5000");
     }
 
     static class MyHandler implements HttpHandler {
